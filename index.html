@@ -5,33 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test Fetch Page</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css"
+        integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/styles.css">
 </head>
 
 <body>
-    <h1>Test Page</h1>
+
+    <h1>Random Quote Generator</h1>
+
     <div id="quote-one"></div>
 
-    <div id="quote-two"></div>
+    <button onclick="generateQuote()" type="submit" class="pure-button pure-button-primary">Generate</div>
 
-    <button onclick="generateQuote()">Generate</div>
+    <button onclick="saveQuote()" class="pure-button pure-button-active">Save</div>
 
-    <form class="pure-form pure-form-stacked">
-        <fieldset>
-            <legend>Random Quote Generator</legend>
-            <!-- <label for="fun-quote">Fun Quote</label> -->
-            <button type="submit" class="pure-button pure-button-primary">Generate Quote</button>
-        </fieldset>
-    </form>
-
-    <form class="pure-form pure-form-stacked">
-        <fieldset>
-            <legend>Cat Pic Generator</legend>
-            <!-- <label for="car-pic">Cat Picture</label> -->
-            <button type="submit" class="pure-button pure-button-primary">Generate Cat</button>
-        </fieldset>
-    </form>
+    
 
 
 
@@ -39,7 +28,7 @@
 
 
 
-    <script src="assets/script.js"></script>
+        <script src="assets/script.js"></script>
 </body>
 
 </html>
