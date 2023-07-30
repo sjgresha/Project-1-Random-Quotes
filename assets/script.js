@@ -79,10 +79,12 @@ function saveQuote() {
 
     localStorage.setItem("dogImageURLArray", JSON.stringify(dogImageURLArray));
 
-//    loadQuotes();
+    loadQuotes();
 }
 
 function loadQuotes() {
+    document.querySelector("aside").innerHTML = "";
+
     var recalledQuoteLines = JSON.parse(localStorage.getItem("savedQuoteLineArray"));
     var recalledQuoteAuthors = JSON.parse(localStorage.getItem("savedQuoteAuthorArray"));
     var recalledDogImage = JSON.parse(localStorage.getItem("dogImageURLArray"));
@@ -103,12 +105,49 @@ function loadQuotes() {
         dogImageURLArray = recalledDogImage;
     }
 
-    var savedCombos = document.querySelector("aside");// Need to build out to render the button to reload picture and quote.
+// Need to build out to render the button to reload picture and quote.
+    var savedCombos = document.querySelector("aside");
     for(var i = 0; i < savedQuoteLineArray.length; i++ ) {
-        var comboButton = document.createElement("p");
-        comboButton.textContent = savedQuoteLineArray[i];
+        var comboButton = document.createElement("div");
+        var comboImage = document.createElement("img");
+        var comboQuote = document.createElement("p");
+
+        comboButton.setAttribute("id", "combo-button-" + [i]);
+        comboButton.setAttribute("value", i);
+        comboImage.setAttribute("src", dogImageURLArray[i]);
+        comboQuote.textContent = savedQuoteLineArray[i];
         savedCombos.append(comboButton);
+        comboButton.append(comboImage, comboQuote);
+        comboButton.setAttribute("onclick", "reloadQuote(this.id)")
     }
+}
+
+function reloadQuote(id) {
+    document.getElementById("quote-one").innerHTML = "";
+    document.getElementById("dog-image").innerHTML = "";
+
+    var x = id;
+    var y = parseInt(x.replace("combo-button-",""));
+
+    console.log(y);
+    console.log(savedQuoteLineArray[y]);
+    console.log(savedQuoteAuthorArray[y]);
+    console.log(dogImageURLArray[y]);
+
+    var quoteOneBox = document.getElementById("quote-one");
+    var quoteOneLine = document.createElement("h2");
+    quoteOneLine.textContent = savedQuoteLineArray[y];
+
+    var quoteOneAuthor = document.createElement("p");
+    quoteOneAuthor.textContent = savedQuoteAuthorArray[y];
+
+    quoteOneBox.append(quoteOneLine, quoteOneAuthor);
+
+    var dogImageBox = document.getElementById("dog-image");
+    var dogImageElement = document.createElement("img");
+    dogImageElement.setAttribute("src", dogImageURLArray[y]);
+    dogImageElement.setAttribute("alt", "Random picture of a dog.");
+    dogImageBox.append(dogImageElement);
 }
 
 loadQuotes();

@@ -2,7 +2,7 @@
 
 body {
     height: 100%;
-    background-color: darkolivegreen;
+    background-color: #cdeced;
     text-align: center;
 }
 
@@ -45,4 +45,35 @@ main {
 
 aside {
     font-style: italic;
+}
+
+
+/*=====Style by Andrew=====*/
+aside {
+    max-width: 640px;
+    margin: auto;
+}
+
+aside div {
+    background-color: #FFFFFF;
+    margin: 12px 0;
+    display: flex;
+    align-items: center;
+    border-radius: 72px;
+    cursor: pointer;
+}
+
+aside div img {
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+aside div p {
+    text-align: left;
+    font-size: 18px;
+    margin: 0 12px;
+    width: 492px;
+    font-weight: bold;
 }
