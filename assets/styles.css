@@ -29,6 +29,11 @@ main {
     text-align: center;
 }
 
+img {
+    max-width: 75%;
+    height: auto;
+}
+
 #quote-one {
     text-align: center;
 }
