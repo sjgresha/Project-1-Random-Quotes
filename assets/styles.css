@@ -12,13 +12,15 @@ header {
 
 header h1 {
     text-align: center;
-    color: saddlebrown;
-    -webkit-text-stroke: 1px;
+    color: #ff5353;
+    -webkit-text-stroke: 1.5px;
     -webkit-text-stroke-color: black;
+    font-size: 50px;
 }
 
 header p {
-    font-size: medium;
+    font-size: 30px;
+    font-family:'Edu SA Beginner', cursive;
 }
 
 main {
@@ -39,8 +41,9 @@ img {
 }
 
 #quote-one h2{
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: italic;
+    font-family: 'Raleway', sans-serif;
+    color: darkslategrey;
+    font-size: 30px;
 }
 
 #quote-one p {
