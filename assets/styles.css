@@ -1,5 +1,6 @@
-/*All content is just filler for now and not final*/
-
+* {
+    font-family: 'Raleway', sans-serif;
+}
 body {
     height: 100%;
     background-color: #cdeced;
@@ -13,14 +14,14 @@ header {
 header h1 {
     text-align: center;
     color: #ff5353;
-    -webkit-text-stroke: 1.5px;
-    -webkit-text-stroke-color: black;
-    font-size: 50px;
+    font-size: 72px;
+    font-weight: 600;
 }
 
 header p {
     font-size: 30px;
-    font-family:'Edu SA Beginner', cursive;
+    font-style: italic;
+    font-weight: 300;
 }
 
 main {
@@ -34,6 +35,7 @@ main {
 img {
     max-width: 75%;
     height: auto;
+    border-radius: 25px;
 }
 
 #quote-one {
@@ -41,13 +43,14 @@ img {
 }
 
 #quote-one h2{
-    font-family: 'Raleway', sans-serif;
     color: darkslategrey;
+    font-weight: 600;
     font-size: 30px;
 }
 
 #quote-one p {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 300;
+    font-size: 24px;
     
 }
 
@@ -60,6 +63,9 @@ aside {
 aside {
     max-width: 640px;
     margin: auto;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    flex-direction: column-reverse !important;
 }
 
 aside div {
