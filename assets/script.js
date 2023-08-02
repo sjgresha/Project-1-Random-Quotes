@@ -6,6 +6,7 @@ var savedQuoteLineArray = [];
 var savedQuoteAuthorArray = [];
 var dogImageURLArray = [];
 
+// Function to fetch the inspiring quote and dog image and render them on the HTML 
 function generateQuote() {
     console.log(savedQuoteLineArray);
     console.log(savedQuoteAuthorArray);
@@ -17,7 +18,7 @@ function generateQuote() {
     var quoteOne = "https://api.quotable.io/random";
     var quoteOneBox = document.getElementById("quote-one");
 
-    fetch(quoteOne)
+    fetch(quoteOne)// Fetching quote from Quote API
     .then(function (response) {
         return response.json();
     })
@@ -34,7 +35,7 @@ function generateQuote() {
     var dogImage = "https://dog.ceo/api/breeds/image/random";
     var dogImageBox = document.getElementById("dog-image");
 
-    fetch(dogImage)
+    fetch(dogImage)// Fetching dog image from Dog Image API
     .then(function (response) {
         return response.json();
     })
@@ -49,6 +50,7 @@ function generateQuote() {
     })
 }
 
+// Take the currently displayed main dog image and main quote with author and places them into "arrays" in LocalStorage
 function saveQuote() {
     if (savedQuoteLineArray.length > 4) {
         savedQuoteLineArray.shift();
@@ -82,6 +84,7 @@ function saveQuote() {
     loadQuotes();
 }
 
+// Load quotes and dog images from the LocalStorage Array and places them as buttons to the side of the currently loaded dog image and quote.
 function loadQuotes() {
     document.querySelector("aside").innerHTML = "";
 
@@ -105,7 +108,6 @@ function loadQuotes() {
         dogImageURLArray = recalledDogImage;
     }
 
-// Need to build out to render the button to reload picture and quote.
     var savedCombos = document.querySelector("aside");
     for(var i = 0; i < savedQuoteLineArray.length; i++ ) {
         var comboButton = document.createElement("div");
@@ -122,6 +124,7 @@ function loadQuotes() {
     }
 }
 
+// Function called by the previous function that when clicked will recall the quote and dog image as shown in the preview image
 function reloadQuote(id) {
     document.getElementById("quote-one").innerHTML = "";
     document.getElementById("dog-image").innerHTML = "";
@@ -150,5 +153,5 @@ function reloadQuote(id) {
     dogImageBox.append(dogImageElement);
 }
 
-loadQuotes();
-generateQuote();
+loadQuotes(); // Have the saved quotes and dog images saved in LocalStorage appear as the button the moment the web application is opened
+generateQuote(); // Have a main quote and dog image appear on the page the moment the web application is opened

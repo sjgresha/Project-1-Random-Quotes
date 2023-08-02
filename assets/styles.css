@@ -5,6 +5,8 @@ body {
     height: 100%;
     background-color: #cdeced;
     text-align: center;
+    max-width: 1640px;
+    margin: auto;
 }
 
 header {
@@ -22,6 +24,8 @@ header p {
     font-size: 30px;
     font-style: italic;
     font-weight: 300;
+    position: relative;
+    bottom: 36px;
 }
 
 main {
@@ -46,6 +50,8 @@ img {
     color: darkslategrey;
     font-weight: 600;
     font-size: 30px;
+    max-width: 640px;
+    margin: 36px auto;
 }
 
 #quote-one p {
@@ -88,6 +94,6 @@ aside div p {
     text-align: left;
     font-size: 18px;
     margin: 0 12px;
-    width: 492px;
+    width: calc(100% - 154px);
     font-weight: bold;
 }
