@@ -30,5 +30,7 @@ Challenge Gomez - https://github.com/clgomez5
 The following API's were used in assistance to create the application:
 
 https://dog.ceo/dog-api/
+
 https://github.com/lukePeavey/quotable accessed as https://api.quotable.io/
 
+Font provided by Google Fonts as Designed by Matt McInerney, Pablo Impallari, Rodrigo Fuenzalida https://fonts.google.com/specimen/Raleway
